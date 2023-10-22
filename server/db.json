@@ -1,0 +1,93 @@
+{
+    "contacts": [ 
+    
+    {
+    
+        "id":"D7XCVBVB",
+        "name":"Brad Gibson",
+        "email":"brad@gmail.com",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU",
+        "mobile":"458568565",
+        "company":"Youtube",
+        "title":"Youtuber",
+        "groupId":"3"
+    
+    },
+    {
+    
+        "id":"Z8FGHJKL",
+        "name":"Gleena kim",
+        "email":"Gleena@gmail.com",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU",
+        "mobile":"245875381",
+        "company":"twitter",
+        "title":"cooler",
+        "groupId":"2"
+    
+    },
+    {
+    
+        "id":"D4RTYUIO",
+        "name":"Valdeen Min",
+        "email":"Valdeen@gmail.com",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU",
+        "mobile":"098765434567",
+        "company":"google",
+        "title":"freelancer",
+        "groupId":"1"
+    
+    },
+    {
+    
+        "id":"F7DFGHJK",
+        "name":"Zoy franko",
+        "email":"franko@gmail.com",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU",
+        "mobile":"458568565",
+        "company":"Spotify",
+        "title":"Singer",
+        "groupId":"3"
+    
+    },
+    {
+    
+        "id":"D7uiopoi",
+        "name":"Doon Wish",
+        "email":"Doon@gmail.com",
+        "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU",
+        "mobile":"52587896541",
+        "company":"CBC",
+        "title":"Monitor",
+        "groupId":"4"
+    
+    }
+    ],
+
+    "groups":[
+    {
+    "id":"1",
+    "name":"college"
+    },
+    {
+    "id":"2",
+    "name":"college"
+    },
+    {
+    "id":"3",
+    "name":"college"
+    },
+    {
+    "id":"4",
+    "name":"college"
+    },
+    {
+    "id":"5",
+    "name":"college"
+    },
+    {
+    "id":"6",
+    "name":"college"
+    }
+    ]
+    
+    }
