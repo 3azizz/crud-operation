@@ -3,13 +3,14 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
 import { IContact } from '../models/IContact';
 import { IGroup } from '../models/IGroup';
+import { group } from '@angular/animations';
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
 
 
-  private  serverUrl:string = `http://localhost:9000/`; //json-server URL
+  private  serverUrl:string = `http://localhost:9000`; //json-server URL
   constructor(private httpClient:HttpClient) {  }
 
 //GET All Contacts
@@ -35,7 +36,7 @@ public CreateContact(contact:IContact):Observable<IContact> {
 
 //Update a Contact
 
-public UpdateContact(contactId:string,contact:IContact):Observable<IContact> {
+public UpdateContact(contact:IContact , contactId:string):Observable<IContact> {
   let dataURL:string = `${this.serverUrl}/contacts/${contactId}`;
   return this.httpClient.put<IContact>(dataURL,contact).pipe(catchError(this.handleError));
 }
@@ -57,8 +58,8 @@ public getAllGroups():Observable<IGroup[]> {
 
 //Get Single Group
 
-public getGroup(groupId:string):Observable<IGroup> {
-let dataURL:string = `${this.serverUrl}/groups/${groupId}`;
+public getGroup(Contact:IContact):Observable<IGroup> {
+let dataURL:string = `${this.serverUrl}/groups/${Contact.groupId}`;
 return this.httpClient.get<IGroup>(dataURL).pipe(catchError(this.handleError));
 }
 

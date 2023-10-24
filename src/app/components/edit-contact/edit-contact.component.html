@@ -7,33 +7,37 @@
     </div>
 </div>
 
+
+
+
 <!--Create contact form-->
 
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <form>
+            <form (submit)="onSubmitUpdate()">
                 <div class="mb-2">
-                    <input type="text" placeholder="Name" class="form-control">
+                    <input required="true" [(ngModel)]="contact.name" [value]="contact.name" name="name" type="text" placeholder="Name" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="text" placeholder="photo URL" class="form-control">
+                    <input  required="true"  [(ngModel)]="contact.photo" [value]="contact.photo" name="photo"  type="text" placeholder="photo URL" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="text" placeholder="Email" class="form-control">
+                    <input  required="true" [(ngModel)]="contact.email" [value]="contact.email" name="email"  type="text" placeholder="Email" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="text" placeholder="Mobile" class="form-control">
+                    <input  required="true" [(ngModel)]="contact.mobile" [value]="contact.mobile" name="mobile"  type="text" placeholder="Mobile" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="text" placeholder="Company" class="form-control">
+                    <input  required="true"  [(ngModel)]="contact.company" [value]="contact.company" name="Company"  type="text" placeholder="Company" class="form-control">
                 </div>
                 <div class="mb-2">
-                    <input type="text" placeholder="Title" class="form-control">
+                    <input  required="true"  [(ngModel)]="contact.title" [value]="contact.title" name="title"  type="text" placeholder="Title" class="form-control">
                 </div>
                 <div class="mb-2">
                  <select class="form-control">
                     <option value="">Select a Group</option>
+                    <option [value]="group.id" *ngFor="let group of groups ">{{group.name}}</option>
                  </select>
                 </div>
                 <div class="mb-2">
@@ -47,7 +51,7 @@
         </div>
 
         <div class="col-sm-4">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU" class="contact-image">
+            <img [src]="contact.photo" class="contact-image">
         </div>
     </div>
 </div>

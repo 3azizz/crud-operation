@@ -1,4 +1,4 @@
 export interface IGroup{
     id:string;
-    name:string
+    name:string;
 }

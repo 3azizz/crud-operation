@@ -25,37 +25,56 @@
     </div>
 </div>
 
+<!--Loading Spinner-->
+
+<div *ngIf="loading">
+
+    <app-spinner></app-spinner>
+</div>
+
+<!--Error message-->
+
+<div *ngIf="!loading && errorMessage">
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p class="h4 text-danger fw-bold">{{errorMessage}}</p>
+        </div>
+    </div>
+</div>
+</div>
+
 <!----Cardsss-->
 
-<div class="container mt-3">
+<div class="container mt-3" *ngIf="!loading && contacts.length>0">
     <div class="row">
-        <div class="col-md-6">
-            <div class="card list-group-item-danger shadow-lg">
-                <div class="card-body ">
+        <div class="col-md-6"  *ngFor="let contact of contacts">
+            <div class="card list-group-item-danger shadow-lg my-2" >
+                <div class="card-body"  >
                     <div class="row">
                         <div class="col-sm-4 ">
 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRr0YlatAy-hrNCQjzZ7fqDzNiXt7HGmzVaA&usqp=CAU" class="contact-image" >
+                            <img [src]="contact.photo" class="contact-image" >
                         </div>
                         <div class="col-sm-7 align-items-center">
                             <ul class="list-group">
-                                <li class="list-group-item ">Name: <span class="fw-bold">name</span></li>
-                                <li class="list-group-item">Email:<span class="fw-bold">Email</span></li>
-                                <li class="list-group-item">Mobile:<span class="fw-bold">mobile</span></li>
+                                <li class="list-group-item ">Name: <span class="fw-bold">{{contact.name}}</span></li>
+                                <li class="list-group-item">Email:<span class="fw-bold">{{contact.email}}</span></li>
+                                <li class="list-group-item">Mobile:<span class="fw-bold">{{contact.mobile}}</span></li>
                                 
                             </ul>
 
                         </div>
                         <div class="col-sm-1 d-flex flex-column justify-content-center align-items-center">
 
-                            <a class="btn btn-warning my-1" routerLink="/contacts/view/:contactId">
-                                <i class="fa fa-eye"></i>
+                            <a class="btn btn-warning my-1" routerLink="/contacts/view/{{contact.id}}">
+                                <i class="fa-solid fa-eye" style="color: #000000;"></i>
                             </a>
-                            <a class="btn btn-primary my-1" routerLink="/contacts/edit/:contactId">
+                            <a class="btn btn-primary my-1" routerLink="/contacts/edit/{{contact.id}}">
                                 <i class="fa fa-pen"></i>
                             </a>
-                            <button class="btn btn-danger my-1">
-                                <i class="fa fa-trash-alt"></i>
+                            <button class="btn btn-danger my-1" (click)="clickDeleteContact(contact.id)">
+                                <i class="fa-solid fa-trash"></i>
                             </button>
                         </div>
                     </div>
